@@ -1,0 +1,9 @@
+[PRODUZIDA] 1 | Alice -> Mensagem geral
+[CONSUMIDA] 2 | Bob <- Mensagem geral
+[CONSUMIDA] 2 | Charlie <- Mensagem geral
+[PRODUZIDA] 1 | Alice -> Oi!
+[PRODUZIDA] 1 | Alice -> Mensagem privada
+[CONSUMIDA] 2 | Bob <- Mensagem privada
+[PRODUZIDA] 1 | Alice -> Mensagem no canal
+[CONSUMIDA] 2 | Bob <- Mensagem no canal
+[CONSUMIDA] 2 | Charlie <- Mensagem no canal

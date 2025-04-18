@@ -1,4 +1,3 @@
-
 import socket
 import threading
 
@@ -18,8 +17,7 @@ def main():
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
         s.connect((HOST, PORT))
 
-        name_prompt = s.recv(1024).decode()
-        print(name_prompt)
+        print(s.recv(1024).decode())
         name = input("> ")
         s.sendall(name.encode())
 

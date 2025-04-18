@@ -15,7 +15,7 @@ def handle_client(conn, addr):
         msg_mgr.add_client(proxy)
 
         print(f"[+] {name} conectado de {addr}")
-        msg_mgr.broadcast(f"[Sistema] {name} entrou no chat.", exclude=proxy)
+        msg_mgr.broadcast(proxy, f"{name} entrou no chat.")
 
         while True:
             data = conn.recv(1024).decode()
@@ -24,23 +24,23 @@ def handle_client(conn, addr):
 
             if data.startswith("/msg"):
                 _, target_name, msg = data.split(" ", 2)
-                msg_mgr.send_to(target_name, f"[Privado de {name}]: {msg}")
-            elif data.startswith("/grupo"):
-                _, group = data.split(" ", 1)
-                proxy.group = group
-                proxy.send(f"[Sistema] Você entrou no grupo {group}")
-            elif data.startswith("/grupo_msg"):
+                msg_mgr.send_to(proxy, target_name, msg)
+            elif data.startswith("/canal"):
+                _, channel = data.split(" ", 1)
+                proxy.channel = channel
+                proxy.send(f"[Sistema] Você entrou no canal {channel}")
+            elif data.startswith("/canal_msg"):
                 _, msg = data.split(" ", 1)
-                msg_mgr.send_to_group(proxy.group, f"[{name}]: {msg}")
+                msg_mgr.send_to_channel(proxy, msg)
             else:
-                msg_mgr.broadcast(f"{name}: {data}", exclude=proxy)
+                msg_mgr.broadcast(proxy, data)
     except:
         pass
     finally:
         msg_mgr.remove_client(proxy)
-        msg_mgr.broadcast(f"[Sistema] {name} saiu.", exclude=None)
+        msg_mgr.broadcast(proxy, f"{proxy.name} saiu.")
         conn.close()
-        print(f"[-] {name} desconectado de {addr}")
+        print(f"[-] {proxy.name} desconectado de {addr}")
 
 def start_server():
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
