@@ -1,0 +1,55 @@
+[PRODUZIDA] 1 | Diego -> Diego entrou no chat.
+[PRODUZIDA] 1 | Henrique -> Henrique entrou no chat.
+[PRODUZIDA] 1 | Diego -> Diego entrou no chat.
+[CONSUMIDA] 2 | Henrique <- Diego entrou no chat.
+[PRODUZIDA] 1 | Artur -> Artur entrou no chat.
+[CONSUMIDA] 3 | Henrique <- Artur entrou no chat.
+[CONSUMIDA] 2 | Diego <- Artur entrou no chat.
+[PRODUZIDA] 4 | Henrique -> Diego Esta é uma mensagem enviada para o Diego
+[CONSUMIDA] 5 | Diego <- Diego Esta é uma mensagem enviada para o Diego
+[CONSUMIDA] 5 | Artur <- Diego Esta é uma mensagem enviada para o Diego
+[PRODUZIDA] 5 | Henrique -> Artur ola 1
+[CONSUMIDA] 6 | Diego <- Artur ola 1
+[CONSUMIDA] 6 | Artur <- Artur ola 1
+[PRODUZIDA] 6 | Henrique -> clear
+[CONSUMIDA] 7 | Diego <- clear
+[CONSUMIDA] 7 | Artur <- clear
+[PRODUZIDA] 7 | Henrique -> Henrique saiu.
+[CONSUMIDA] 8 | Diego <- Henrique saiu.
+[CONSUMIDA] 8 | Artur <- Henrique saiu.
+[PRODUZIDA] 1 | Henrique -> Henrique entrou no chat.
+[PRODUZIDA] 1 | Diego -> Diego entrou no chat.
+[CONSUMIDA] 2 | Henrique <- Diego entrou no chat.
+[PRODUZIDA] 1 | Artur -> Artur entrou no chat.
+[CONSUMIDA] 3 | Henrique <- Artur entrou no chat.
+[CONSUMIDA] 2 | Diego <- Artur entrou no chat.
+[PRODUZIDA] 4 | Henrique -> Esta é uma mensagem geral
+[CONSUMIDA] 5 | Diego <- Esta é uma mensagem geral
+[CONSUMIDA] 5 | Artur <- Esta é uma mensagem geral
+[PRODUZIDA] 5 | Henrique -> Mensagem privada
+[CONSUMIDA] 6 | Artur <- Mensagem privada
+[PRODUZIDA] 6 | Henrique -> /sair
+[CONSUMIDA] 7 | Diego <- /sair
+[CONSUMIDA] 7 | Artur <- /sair
+[PRODUZIDA] 7 | Henrique -> Henrique saiu.
+[CONSUMIDA] 8 | Diego <- Henrique saiu.
+[CONSUMIDA] 8 | Artur <- Henrique saiu.
+[PRODUZIDA] 9 | Diego -> /sair
+[CONSUMIDA] 10 | Artur <- /sair
+[PRODUZIDA] 10 | Diego -> /sair
+[CONSUMIDA] 11 | Artur <- /sair
+[PRODUZIDA] 11 | Diego -> Diego saiu.
+[CONSUMIDA] 12 | Artur <- Diego saiu.
+[PRODUZIDA] 13 | Artur -> /sair
+[PRODUZIDA] 14 | Artur -> Artur saiu.
+[PRODUZIDA] 1 | Artur -> Artur entrou no chat.
+[PRODUZIDA] 1 | Henrique -> Henrique entrou no chat.
+[CONSUMIDA] 2 | Artur <- Henrique entrou no chat.
+[PRODUZIDA] 1 | Diego -> Diego entrou no chat.
+[CONSUMIDA] 3 | Artur <- Diego entrou no chat.
+[CONSUMIDA] 2 | Henrique <- Diego entrou no chat.
+[PRODUZIDA] 3 | Henrique -> ola pessoal do aulaht
+[CONSUMIDA] 4 | Diego <- ola pessoal do aulaht
+[PRODUZIDA] 5 | Diego -> Diego saiu.
+[CONSUMIDA] 6 | Artur <- Diego saiu.
+[CONSUMIDA] 6 | Henrique <- Diego saiu.
