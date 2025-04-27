@@ -25,13 +25,16 @@ def handle_client(conn, addr):
             if data.startswith("/msg"):
                 _, target_name, msg = data.split(" ", 2)
                 msg_mgr.send_to(proxy, target_name, msg)
+                
+            elif data.startswith("/canal_msg"):
+                _, msg = data.split(" ", 1)
+                msg_mgr.send_to_channel(proxy, msg)
+
             elif data.startswith("/canal"):
                 _, channel = data.split(" ", 1)
                 proxy.channel = channel
                 proxy.send(f"[Sistema] Você entrou no canal {channel}")
-            elif data.startswith("/canal_msg"):
-                _, msg = data.split(" ", 1)
-                msg_mgr.send_to_channel(proxy, msg)
+            
             else:
                 msg_mgr.broadcast(proxy, data)
     except:
